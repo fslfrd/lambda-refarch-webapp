@@ -43,9 +43,10 @@ function App() {
   }
 
   const clearCredentials = () => {
-    console.log('href',window.location.href);
-    console.log('redirect', config.redirect_url);
-    window.location.href = config.redirect_url;
+    const hash = window.location.hash.substr(1);
+    if (hash === '') {
+      window.location.href = config.redirect_url;
+    }
   }
 
   const getIdToken = () => {
