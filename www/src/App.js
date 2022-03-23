@@ -43,6 +43,8 @@ function App() {
   }
 
   const clearCredentials = () => {
+    console.log('href',window.location.href);
+    console.log('redirect', config.redirect_url);
     window.location.href = config.redirect_url;
   }
 
